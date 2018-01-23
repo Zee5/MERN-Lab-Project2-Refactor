@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 // import SkydiveItem from './SkydiveItem';
 const SkydiveItem = ({name}) => (
   <li>
