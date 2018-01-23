@@ -32,4 +32,5 @@ class SkydiveForm extends Component {
     )
   }
 }
+
 export default SkydiveForm
