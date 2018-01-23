@@ -8,10 +8,9 @@ class SkydiveList extends Component {
       skydives: []
     }
   }
-
     // make request to my back end api and fetch data
   componentDidMount () {
-    this.loadSkydives
+    this.loadSkydives()
   }
   // GROP ALL API CALLS UNDER this function
   // https://github.com/github/fetch/issues/203 -- SOURCE for error handling
@@ -34,6 +33,7 @@ class SkydiveList extends Component {
   .then(skydives => this.setState({skydives}))
   }
   render () {
+      
     return (
       <div>
         <h1>Book Your Skydiving!</h1>
