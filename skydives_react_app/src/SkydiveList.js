@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import SkydiveItem from './SkydiveItem'
+import './SkydiveList.css'
+
 const APIURL = '/api/skydives'
 
 class SkydiveList extends Component {
@@ -36,14 +38,17 @@ class SkydiveList extends Component {
   render () {
     const skydives = this.state.skydives.map((s) => (
       <SkydiveItem
-          key={s._id}
-          {...s}
+        key={s._id}
+        {...s}
           />
       ))
     return (
       <div>
         <h1>Book Your Skydiving!</h1>
-        {skydives}
+        <ul>
+          {skydives}
+        </ul>
+      
       </div>
     )
   }
