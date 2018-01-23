@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import SkydiveItem from './SkydiveItem'
+import SkydiveForm from './SkydiveForm'
 import './SkydiveList.css'
 
 const APIURL = '/api/skydives'
@@ -45,6 +46,7 @@ class SkydiveList extends Component {
     return (
       <div>
         <h1>Book Your Skydiving!</h1>
+        <SkydiveForm />
         <ul>
           {skydives}
         </ul>
