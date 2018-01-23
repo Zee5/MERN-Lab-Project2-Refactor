@@ -5,11 +5,15 @@ class SkydiveForm extends Component {
     super(props)
     this.state = {inputValue: 'initial test input ..'}
     this.handleChange = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
   handleChange (e) {
     this.setState({
-        inputValue: e.target.value
-      })
+      inputValue: e.target.value
+    })
+  }
+  handleSubmit () {
+    console.log(this.state.inputValue)
   }
   render () {
     return (
@@ -19,7 +23,11 @@ class SkydiveForm extends Component {
           value={this.state.inputValue}
           onChange={this.handleChange}
          />
-        <button>Book the Skydive</button>
+        <button
+          onClick={this.handleSubmit}
+        >
+        Book the Skydive
+        </button>
       </div>
     )
   }
